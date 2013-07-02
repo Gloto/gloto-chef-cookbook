@@ -1,6 +1,6 @@
-# CHANGELOG for gloto-cloud
+# CHANGELOG for gloto-chef-cookbook
 
-This file is used to list changes made in each version of gloto-cloud.
+This file is used to list changes made in each version of gloto-chef-cookbook.
 
 ## 0.1.0:
 
