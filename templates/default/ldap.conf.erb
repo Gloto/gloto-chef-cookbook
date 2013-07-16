@@ -1,0 +1,39 @@
+#
+# ldap.conf generated for <%= node[:hostname] %>
+#
+# This is the configuration file for the LDAP nameservice
+# switch library and the LDAP PAM module.
+#
+# Managed by Chef
+#
+
+# The distinguished name of the search base.
+
+uri ldaps://ldap1-us-east.gloto.com
+
+ldap_version 3
+
+# The distinguished name to bind to the server with
+# if the effective user ID is root. Password is
+# stored in /etc/ldap.secret (mode 600)
+rootbinddn cn=admin,dc=gloto,dc=com
+
+pam_password md5
+
+# Where to find data
+base ou=People,dc=gloto,dc=com
+#nss_base_passwd	ou=People,dc=padl,dc=com?one
+#nss_base_shadow	ou=People,dc=padl,dc=com?one
+nss_base_group		ou=Groups,dc=gloto,dc=com
+
+# OpenLDAP SSL mechanism
+# start_tls mechanism uses the normal LDAP port, LDAPS typically 636
+#ssl start_tls
+#ssl on
+
+# OpenLDAP SSL options
+# Require and verify server certificate (yes/no)
+# Default is to use libldap's default behavior, which can be configured in
+# /etc/openldap/ldap.conf using the TLS_REQCERT setting.  The default for
+# OpenLDAP 2.0 and earlier is "no", for 2.1 and later is "yes".
+#tls_checkpeer yes
