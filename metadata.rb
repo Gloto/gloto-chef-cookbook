@@ -11,3 +11,6 @@ recipe           "gloto-chef-cookbook::ldap-client", "Set up LDAP+PAM authentica
 
 supports "ubuntu"
 supports "debian"
+
+depends "openssh"
+depends "nscd"
